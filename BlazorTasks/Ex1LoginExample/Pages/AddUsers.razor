@@ -1,0 +1,53 @@
+﻿@page "/AddUsers"
+@using Ex1LoginExample.Data.Impl
+@using Ex1LoginExample.Models
+@using Ex1LoginExample.Data
+@using Microsoft.AspNetCore.Cors
+@using System.Timers
+@inject IUserService InjectedUserService
+@inject NavigationManager NavigationManager
+<h3>AddUsers</h3>
+<EditForm Model="@newUserItem" OnValidSubmit="@AddNewUser">
+    
+    <DataAnnotationsValidator/>
+    <ValidationSummary/>
+    <div class="form-group">User name<br/>
+        <InputTextArea @bind-Value="newUserItem.UserName"/>
+    </div>
+
+    <div class="form-group">Role<br/>
+        <InputTextArea @bind-Value="newUserItem.Role"/>
+    </div>
+
+    <div class="form-group">Password<br/>
+        <InputTextArea @bind-Value="newUserItem.Password"/>
+    </div>
+    
+    <p class="actions">
+        <button class="btn btn-outline-dark" type="submit">Create</button>
+        <br/>
+        @if (message)
+        {
+            <span>User is created</span>    
+        }
+    </p>
+
+</EditForm>
+
+@code {
+    private User newUserItem = new User();
+    public bool message;
+    public Timer time= new Timer(3000);
+    private async Task AddNewUser()
+    {
+        InjectedUserService.RegisterUser(newUserItem);
+        message = true;
+        //time.Elapsed += TimeOnElapsed;
+        //time.Enabled = true;
+        newUserItem = new User();
+        await Task.Delay(3000);
+        message = false;
+    }
+
+    
+}
