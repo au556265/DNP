@@ -54,7 +54,7 @@ namespace Ex1LoginExample.Data.Impl
            {
                var msg = await status.Content.ReadAsStringAsync();
                
-               throw new ArgumentException($"{msg} Testing" );
+               throw new ArgumentException($"{msg} " );
            }
            
         }
