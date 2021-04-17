@@ -8,7 +8,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FourthCoffee", "BlazorTasks
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoginExample", "BlazorTasks\LoginExample\LoginExample.csproj", "{9466F8A3-F068-423B-B967-6D1295B68797}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ex1LoginExample", "BlazorTasks\Ex1LoginExample\Ex1LoginExample.csproj", "{BA0A7778-3610-463B-A1BD-C5E61B628250}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorAssignment", "BlazorTasks\BlazorAssignment\BlazorAssignment.csproj", "{BA0A7778-3610-463B-A1BD-C5E61B628250}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DNP_Assignments", "DNP_Assignments", "{73A8E755-C9CF-43BB-96D7-79E939E8D8D6}"
 EndProject
