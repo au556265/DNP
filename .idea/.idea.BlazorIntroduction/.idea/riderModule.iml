@@ -1,7 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module type="RIDER_MODULE" version="4">
   <component name="NewModuleRootManager">
-    <content url="file://$MODULE_DIR$/../.." />
+    <content url="file://$MODULE_DIR$/../..">
+      <excludeFolder url="file://$MODULE_DIR$/../../BlazorTasks/Ex1_SimpleSetupLogin/bin" />
+      <excludeFolder url="file://$MODULE_DIR$/../../BlazorTasks/Ex1_SimpleSetupLogin/obj" />
+      <excludeFolder url="file://$MODULE_DIR$/../../BlazorTasks/FourthCoffee/bin" />
+      <excludeFolder url="file://$MODULE_DIR$/../../BlazorTasks/FourthCoffee/obj" />
+      <excludeFolder url="file://$MODULE_DIR$/../../BlazorTasks/LoginExample/bin" />
+      <excludeFolder url="file://$MODULE_DIR$/../../BlazorTasks/LoginExample/obj" />
+      <excludeFolder url="file://$MODULE_DIR$/../../BlazorTasks/TodoTutorial/bin" />
+      <excludeFolder url="file://$MODULE_DIR$/../../BlazorTasks/TodoTutorial/obj" />
+      <excludeFolder url="file://$MODULE_DIR$/../../DNP_Assignments/Assignment1/bin" />
+      <excludeFolder url="file://$MODULE_DIR$/../../DNP_Assignments/Assignment1/obj" />
+      <excludeFolder url="file://$MODULE_DIR$/../../DNP_WebAPI/Assignment2WebAPI/bin" />
+      <excludeFolder url="file://$MODULE_DIR$/../../DNP_WebAPI/Assignment2WebAPI/obj" />
+    </content>
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
 </module>

@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
-using Ex1LoginExample.Models;
+using Assignment2WebAPI.Models;
 
-namespace Ex1LoginExample.Data
+namespace Assignment2WebAPI.Data
 {
     public interface IAdultsData
     {
@@ -11,6 +11,5 @@ namespace Ex1LoginExample.Data
         Task RemoveAdultAsync(int adultID);
         Task<Adult> UpdateAdultAsync(Adult adult);
         Task <Adult> Get(int id);
-
     }
 }

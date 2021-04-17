@@ -105,7 +105,7 @@ using Ex1LoginExample.Data;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 56 "C:\Users\fatem\RiderProjects\BlazorIntroduction\BlazorTasks\Ex1LoginExample\Pages\Edit.razor"
+#line 58 "C:\Users\fatem\RiderProjects\BlazorIntroduction\BlazorTasks\Ex1LoginExample\Pages\Edit.razor"
        
     [Parameter]
     public int Id { get; set; }
@@ -114,12 +114,12 @@ using Ex1LoginExample.Data;
     
     protected override async Task OnInitializedAsync()
     {
-        adultToEdit = InjectedAdultData.Get(Id);
+        adultToEdit = await InjectedAdultData.Get(Id);
     }
 
     private void Save()
     {
-        InjectedAdultData.UpdateAdult(adultToEdit);
+        InjectedAdultData.UpdateAdultAsync(adultToEdit);
         NavMgr.NavigateTo("/Adults");
     }
 

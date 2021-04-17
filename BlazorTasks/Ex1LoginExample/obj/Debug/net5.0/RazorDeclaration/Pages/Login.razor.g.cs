@@ -107,7 +107,7 @@ using Ex1LoginExample.Authentication;
     public async Task PerformLogin() {
         errorMessage = "";
         try {
-            ((CustomAuthenticationStateProvider) AuthenticationStateProvider).ValidateLogin(username, password);
+            await ((CustomAuthenticationStateProvider) AuthenticationStateProvider).ValidateLogin(username, password);
             username = "";
             password = "";
         } catch (Exception e) {
@@ -120,7 +120,7 @@ using Ex1LoginExample.Authentication;
         username = "";
         password = "";
         try {
-            ((CustomAuthenticationStateProvider) AuthenticationStateProvider).Logout();
+           await ((CustomAuthenticationStateProvider) AuthenticationStateProvider).Logout();
             NavigationManager.NavigateTo("/");
         } catch (Exception e) { }
     }

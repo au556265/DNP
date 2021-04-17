@@ -33,17 +33,18 @@ namespace Ex1LoginExample
         {
             services.AddRazorPages();
             services.AddServerSideBlazor();
-            services.AddSingleton<FileContext>();
-            services.AddSingleton<IAdultsData,AdultData>();
-            services.AddScoped<IUserService, InMemoryUserService>();
+            services.AddHttpClient();
+            //services.AddSingleton<FileContext>();
+            services.AddSingleton<IAdultsData,AdultWebApi>();
+            services.AddScoped<IUserService, UserWebApi>();
             services.AddScoped<AuthenticationStateProvider, CustomAuthenticationStateProvider>();
 
             services.AddAuthorization(options => {
                 
                 options.AddPolicy("MustBeAdministrator",  a => 
-                    a.RequireAuthenticatedUser().RequireClaim("Role", "Administrator"));
+                    a.RequireAuthenticatedUser().RequireClaim("Role", "Admin"));
                 options.AddPolicy("MustBeEditorOrAdmin",  a => 
-                    a.RequireAuthenticatedUser().RequireClaim("Role", "Editor", "Administrator"));
+                    a.RequireAuthenticatedUser().RequireClaim("Role", "Editor", "Admin"));
                 
             });
         }

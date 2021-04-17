@@ -113,14 +113,14 @@ using Ex1LoginExample.Models;
 
     protected override async Task OnInitializedAsync()
     {
-        allAdults = InjectedAdultData.GetAdults();
+        allAdults = await InjectedAdultData.GetAdultsAsync();
         adultsToShow = allAdults;
     }
     
     private void RemoveAdult(int adultId)
     {
         Adult adultToRemove = allAdults.First(t => t.Id == adultId);
-        InjectedAdultData.RemoveAdult(adultId);
+        InjectedAdultData.RemoveAdultAsync(adultId);
         allAdults.Remove(adultToRemove);
         adultsToShow.Remove(adultToRemove);
     }

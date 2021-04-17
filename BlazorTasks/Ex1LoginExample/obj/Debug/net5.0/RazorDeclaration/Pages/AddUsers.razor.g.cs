@@ -126,20 +126,28 @@ using System.Timers;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 37 "C:\Users\fatem\RiderProjects\BlazorIntroduction\BlazorTasks\Ex1LoginExample\Pages\AddUsers.razor"
+#line 40 "C:\Users\fatem\RiderProjects\BlazorIntroduction\BlazorTasks\Ex1LoginExample\Pages\AddUsers.razor"
        
     private User newUserItem = new User();
     public bool message;
-    public Timer time= new Timer(3000);
+    private string errorMsg = "";
     private async Task AddNewUser()
     {
-        InjectedUserService.RegisterUser(newUserItem);
-        message = true;
-        //time.Elapsed += TimeOnElapsed;
-        //time.Enabled = true;
-        newUserItem = new User();
-        await Task.Delay(3000);
-        message = false;
+        try
+        {
+            await InjectedUserService.RegisterUser(newUserItem);
+            message = true;
+            errorMsg = "";
+            StateHasChanged();
+            await Task.Delay(2000);
+            newUserItem = new User();
+            message = false;
+        }
+        catch (Exception e)
+        {
+            errorMsg = e.Message;
+        }
+        
     }
 
     

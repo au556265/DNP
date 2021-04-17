@@ -1,28 +1,13 @@
 [
   {
     "JobPosition": {
-      "JobTitle": "Front End Web Developer",
-      "Salary": 66408
-    },
-    "Id": 1,
-    "FirstName": "Lyla",
-    "LastName": "Humphrey",
-    "HairColor": "Black",
-    "EyeColor": "Brown",
-    "Age": 36,
-    "Weight": 64.8,
-    "Height": 147,
-    "Sex": "F"
-  },
-  {
-    "JobPosition": {
       "JobTitle": "Business Development Manager",
       "Salary": 71456
     },
     "Id": 2,
     "FirstName": "Samara",
     "LastName": "Humphrey",
-    "HairColor": "Black",
+    "HairColor": "Blonde",
     "EyeColor": "Brown",
     "Age": 34,
     "Weight": 37,
@@ -177,21 +162,6 @@
     "Age": 33,
     "Weight": 55.4,
     "Height": 171,
-    "Sex": "M"
-  },
-  {
-    "JobPosition": {
-      "JobTitle": "Teacher",
-      "Salary": 32000
-    },
-    "Id": 16,
-    "FirstName": "David",
-    "LastName": "Ataii",
-    "HairColor": "Black",
-    "EyeColor": "Brown",
-    "Age": 26,
-    "Weight": 75,
-    "Height": 180,
     "Sex": "M"
   }
 ]

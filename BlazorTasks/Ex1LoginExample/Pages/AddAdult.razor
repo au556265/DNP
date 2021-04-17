@@ -69,7 +69,7 @@
 
     private void AddNewAdult()
     {
-        InjectedAdultData.AddAdult(newAdultItem);
+        InjectedAdultData.AddAdultAsync(newAdultItem);
         NavigationManager.NavigateTo("/Adults");
     }
 }

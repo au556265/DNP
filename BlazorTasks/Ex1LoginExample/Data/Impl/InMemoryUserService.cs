@@ -5,6 +5,11 @@ using Ex1LoginExample.Persistence;
 
 namespace Ex1LoginExample.Data.Impl
 {
+    public class InMemoryUserService
+    {
+    }
+
+    /*
     public class InMemoryUserService: IUserService {
 
         private FileContext fileContext;
@@ -33,4 +38,5 @@ namespace Ex1LoginExample.Data.Impl
             fileContext.SaveChanges();
         }
     }
+    */
 }

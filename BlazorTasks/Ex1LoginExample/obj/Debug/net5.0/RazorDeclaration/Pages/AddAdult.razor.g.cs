@@ -111,7 +111,7 @@ using Ex1LoginExample.Data;
 
     private void AddNewAdult()
     {
-        InjectedAdultData.AddAdult(newAdultItem);
+        InjectedAdultData.AddAdultAsync(newAdultItem);
         NavigationManager.NavigateTo("/Adults");
     }
 

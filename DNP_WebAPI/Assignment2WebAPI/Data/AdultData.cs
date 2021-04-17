@@ -1,51 +1,43 @@
 ﻿using System.Collections.Generic;
-using System.Collections.Immutable;
 using System.Linq;
-using Ex1LoginExample.Models;
-using Ex1LoginExample.Persistence;
+using System.Threading.Tasks;
+using Assignment2WebAPI.Models;
+using Assignment2WebAPI.Persistence;
 
-namespace Ex1LoginExample.Data.Impl
+namespace Assignment2WebAPI.Data
 {
-    public class AdultData
-    {
-    }
-
-    /*
-    public class AdultData : IAdultsData
+    public class AdultData: IAdultsData
     {
         private FileContext fileContext;
 
-        
         public AdultData(FileContext fileContext)
         {
             this.fileContext = fileContext;
         }
         
-        
-        public IList<Adult> GetAdults()
+        public async Task<IList<Adult>> GetAdultsAsync()
         {
             return fileContext.Adults;
-            
         }
 
-        public void AddAdult(Adult adult)
+        public async Task<Adult> AddAdultAsync(Adult adult)
         {
             int max;
             fileContext.Adults.Add(adult);
             max = fileContext.Adults.Max(adult => adult.Id);
             adult.Id = (++max);
             fileContext.SaveChanges();
-            
+            return adult;
         }
 
-        public void RemoveAdult(int adultID)
+        public async Task RemoveAdultAsync(int adultID)
         {
             Adult toRemove = fileContext.Adults.First(t=>t.Id==adultID);
             fileContext.Adults.Remove(toRemove);
             fileContext.SaveChanges();
         }
 
-        public void UpdateAdult(Adult adult)
+        public async Task<Adult> UpdateAdultAsync(Adult adult)
         {
             Adult toUpdate = fileContext.Adults.First(a => a.Id == adult.Id);
             toUpdate.JobPosition = adult.JobPosition;
@@ -54,12 +46,13 @@ namespace Ex1LoginExample.Data.Impl
             toUpdate.Weight = adult.Weight;
             toUpdate.Height = adult.Height;
             fileContext.SaveChanges();
+            return adult;
         }
 
-        public Adult Get(int id)
+        public async Task<Adult> Get(int id)
         {
             return fileContext.Adults.FirstOrDefault(a => a.Id == id);
+
         }
     }
-    */
 }

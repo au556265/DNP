@@ -10,7 +10,6 @@ C:\Users\fatem\RiderProjects\BlazorIntroduction\BlazorTasks\Ex1LoginExample\bin\
 C:\Users\fatem\RiderProjects\BlazorIntroduction\BlazorTasks\Ex1LoginExample\bin\Debug\net5.0\Ex1LoginExample.pdb
 C:\Users\fatem\RiderProjects\BlazorIntroduction\BlazorTasks\Ex1LoginExample\bin\Debug\net5.0\Ex1LoginExample.Views.dll
 C:\Users\fatem\RiderProjects\BlazorIntroduction\BlazorTasks\Ex1LoginExample\bin\Debug\net5.0\Ex1LoginExample.Views.pdb
-C:\Users\fatem\RiderProjects\BlazorIntroduction\BlazorTasks\Ex1LoginExample\obj\Debug\net5.0\Ex1LoginExample.csprojAssemblyReference.cache
 C:\Users\fatem\RiderProjects\BlazorIntroduction\BlazorTasks\Ex1LoginExample\obj\Debug\net5.0\Ex1LoginExample.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\fatem\RiderProjects\BlazorIntroduction\BlazorTasks\Ex1LoginExample\obj\Debug\net5.0\Ex1LoginExample.AssemblyInfoInputs.cache
 C:\Users\fatem\RiderProjects\BlazorIntroduction\BlazorTasks\Ex1LoginExample\obj\Debug\net5.0\Ex1LoginExample.AssemblyInfo.cs
@@ -64,3 +63,4 @@ C:\Users\fatem\RiderProjects\BlazorIntroduction\BlazorTasks\Ex1LoginExample\obj\
 C:\Users\fatem\RiderProjects\BlazorIntroduction\BlazorTasks\Ex1LoginExample\bin\Debug\net5.0\users.json
 C:\Users\fatem\RiderProjects\BlazorIntroduction\BlazorTasks\Ex1LoginExample\obj\Debug\net5.0\RazorDeclaration\Pages\Edit.razor.g.cs
 C:\Users\fatem\RiderProjects\BlazorIntroduction\BlazorTasks\Ex1LoginExample\obj\Debug\net5.0\Razor\Pages\Edit.razor.g.cs
+C:\Users\fatem\RiderProjects\BlazorIntroduction\BlazorTasks\Ex1LoginExample\obj\Debug\net5.0\Ex1LoginExample.csprojAssemblyReference.cache

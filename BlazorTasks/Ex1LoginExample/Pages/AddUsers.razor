@@ -25,11 +25,14 @@
     
     <p class="actions">
         <button class="btn btn-outline-dark" type="submit">Create</button>
+        <div style="color:red">@errorMsg</div>
         <br/>
         @if (message)
         {
             <span>User is created</span>    
         }
+        
+        
     </p>
 
 </EditForm>
@@ -37,16 +40,24 @@
 @code {
     private User newUserItem = new User();
     public bool message;
-    public Timer time= new Timer(3000);
+    private string errorMsg = "";
     private async Task AddNewUser()
     {
-        InjectedUserService.RegisterUser(newUserItem);
-        message = true;
-        //time.Elapsed += TimeOnElapsed;
-        //time.Enabled = true;
-        newUserItem = new User();
-        await Task.Delay(3000);
-        message = false;
+        try
+        {
+            await InjectedUserService.RegisterUser(newUserItem);
+            message = true;
+            errorMsg = "";
+            StateHasChanged();
+            await Task.Delay(2000);
+            newUserItem = new User();
+            message = false;
+        }
+        catch (Exception e)
+        {
+            errorMsg = e.Message;
+        }
+        
     }
 
     
