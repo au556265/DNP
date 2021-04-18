@@ -19,6 +19,8 @@ namespace Assignment2WebAPI.Controllers
         }
 
         [HttpGet]
+        [ProducesResponseType(statusCode:500)]
+        [ProducesResponseType(statusCode:200)]
         public async Task<ActionResult<IList<Adult>>> 
             GetAdults() {
             try {
@@ -31,18 +33,28 @@ namespace Assignment2WebAPI.Controllers
         }
 
         [HttpDelete]
+        [ProducesResponseType(statusCode:404)]
+        [ProducesResponseType(statusCode:200)]
         [Route("{id:int}")]
         public async Task<ActionResult> DeleteAdult([FromRoute] int id) {
+            if (await adultsData.Get(id) == null)
+            {
+                return NotFound();
+            }
             try {
                 await adultsData.RemoveAdultAsync(id);
                 return Ok();
             } catch (Exception e) {
                 Console.WriteLine(e);
                 return StatusCode((int)HttpStatusCode.InternalServerError, e.Message);
+                
             }
         }
 
         [HttpPost]
+        [ProducesResponseType(statusCode:400)]
+        [ProducesResponseType(statusCode:500)]
+        [ProducesResponseType(statusCode:200)]
         public async Task<ActionResult<Adult>> AddAdult([FromBody] Adult adult) {
             if (!ModelState.IsValid)
             {
@@ -57,19 +69,32 @@ namespace Assignment2WebAPI.Controllers
             }
         }
 
+
+ 
         [HttpPatch]
+        [ProducesResponseType(statusCode:400)]
+        [ProducesResponseType(statusCode:404)]
+        [ProducesResponseType(statusCode:200)]
+        
         [Route("{id:int}")]
         public async Task<ActionResult<Adult>> UpdateAdult([FromBody] Adult adult) {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+            
             try {
                 Adult updatedAdult = await adultsData.UpdateAdultAsync(adult);
                 return Ok(updatedAdult); 
             } catch (Exception e) {
                 Console.WriteLine(e);
-                return StatusCode(500, e.Message);
+                return StatusCode(404, e.Message);
             }
         }
         
         [HttpGet]
+        [ProducesResponseType(statusCode:404)]
+        [ProducesResponseType(statusCode:200)]
         [Route("{id:int}")]
         public async Task<ActionResult<Adult>> 
             GetAdult([FromRoute] int id) {
@@ -78,7 +103,7 @@ namespace Assignment2WebAPI.Controllers
                 return Ok(adult);
             } catch (Exception e) {
                 Console.WriteLine(e);
-                return StatusCode(500, e.Message);
+                return StatusCode(404, e.Message);
             }
         }
 

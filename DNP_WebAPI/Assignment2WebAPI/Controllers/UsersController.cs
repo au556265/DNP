@@ -19,6 +19,8 @@ namespace Assignment2WebAPI.Controllers
         }
 
         [HttpGet]
+        [ProducesResponseType(statusCode:400)]
+        [ProducesResponseType(statusCode:200)]
         public async Task<ActionResult<User>> ValidateUser([FromQuery] string username, [FromQuery] string password)
         {
             Console.WriteLine("Here");
@@ -35,6 +37,9 @@ namespace Assignment2WebAPI.Controllers
 
         
         [HttpPost]
+        [ProducesResponseType(statusCode:400)]
+        [ProducesResponseType(statusCode:500)]
+        [ProducesResponseType(statusCode:200)]
         public async Task<ActionResult<User>> AddUser([FromBody] User user) {
             if (!ModelState.IsValid)
             {

@@ -54,7 +54,7 @@ namespace BlazorAssignment.Data.Impl
            {
                var msg = await status.Content.ReadAsStringAsync();
                
-               throw new ArgumentException($"{msg} " );
+               throw new ArgumentException($"{msg}" );
            }
            
         }

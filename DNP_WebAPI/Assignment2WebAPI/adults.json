@@ -7,7 +7,7 @@
     "Id": 2,
     "FirstName": "Samara",
     "LastName": "Humphrey",
-    "HairColor": "Blonde",
+    "HairColor": "Blond",
     "EyeColor": "Brown",
     "Age": 34,
     "Weight": 37,
@@ -163,5 +163,50 @@
     "Weight": 55.4,
     "Height": 171,
     "Sex": "M"
+  },
+  {
+    "JobPosition": {
+      "JobTitle": "Manager",
+      "Salary": 30000
+    },
+    "Id": 16,
+    "FirstName": "Nathan",
+    "LastName": "Humphrey",
+    "HairColor": "Brown",
+    "EyeColor": "Hazel",
+    "Age": 25,
+    "Weight": 78,
+    "Height": 185,
+    "Sex": "M"
+  },
+  {
+    "JobPosition": {
+      "JobTitle": "Manager",
+      "Salary": 30000
+    },
+    "Id": 24,
+    "FirstName": "Daniel",
+    "LastName": "Andersen",
+    "HairColor": "Brown",
+    "EyeColor": "Blue",
+    "Age": 27,
+    "Weight": 75,
+    "Height": 185,
+    "Sex": "M"
+  },
+  {
+    "JobPosition": {
+      "JobTitle": "Teacher",
+      "Salary": 25000
+    },
+    "Id": 25,
+    "FirstName": "Mai",
+    "LastName": "Andersen",
+    "HairColor": "Blond",
+    "EyeColor": "Blue",
+    "Age": 26,
+    "Weight": 50,
+    "Height": 165,
+    "Sex": "F"
   }
 ]

@@ -44,17 +44,8 @@ namespace BlazorAssignment.Models
         [ValidateGender]
         public string Sex { get; set; }
 
-        public void Update(Person toUpdate)
-        {
-            Age = toUpdate.Age;
-            Height = toUpdate.Height;
-            HairColor = toUpdate.HairColor;
-            Sex = toUpdate.Sex;
-            Weight = toUpdate.Weight;
-            EyeColor = toUpdate.EyeColor;
-            FirstName = toUpdate.FirstName;
-            LastName = toUpdate.LastName;
-        }
+  
+        
     }
 
     public class ValidateHairColor : ValidationAttribute
