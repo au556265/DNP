@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Assignment2WebAPI.Persistence;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
@@ -13,8 +14,14 @@ namespace Assignment2WebAPI
     {
         public static void Main(string[] args)
         {
+            using (DataContext dataContext = new DataContext())
+            {
+              
+            }
             CreateHostBuilder(args).Build().Run();
         }
+
+   
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)

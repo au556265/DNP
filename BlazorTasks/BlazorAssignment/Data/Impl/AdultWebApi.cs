@@ -38,7 +38,6 @@ namespace BlazorAssignment.Data.Impl
 
         public async Task AddAdultAsync(Adult adult)
         {
-          
             string adultAsJson = JsonSerializer.Serialize(adult);
             StringContent content = new StringContent(
                 adultAsJson,

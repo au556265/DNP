@@ -8,7 +8,8 @@ namespace BlazorAssignment.Models
 {
     public class Person
     {
-        [JsonPropertyName("id")] public int Id { get; set; }
+        [JsonPropertyName("id")] 
+        public int Id { get; set; }
 
         [JsonPropertyName("firstName")]
         [MinLength(3)]

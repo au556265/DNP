@@ -29,9 +29,12 @@ namespace Assignment2WebAPI
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-            services.AddSingleton<FileContext>();
-            services.AddSingleton<IAdultsData,AdultData>();
-            services.AddScoped<IUserService, InMemoryUserService>();
+            //services.AddSingleton<FileContext>();
+            //services.AddSingleton<IAdultsData,AdultData>();
+            //services.AddScoped<IUserService, InMemoryUserService>();
+            services.AddDbContext<DataContext>();
+            services.AddScoped<IAdultsData,SqliteAdults>();
+            services.AddScoped<IUserService, SqliteUsers>();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo {Title = "Assignment2WebAPI", Version = "v1"});
@@ -55,6 +58,8 @@ namespace Assignment2WebAPI
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints => { endpoints.MapControllers(); });
+            
+            
         }
     }
 }

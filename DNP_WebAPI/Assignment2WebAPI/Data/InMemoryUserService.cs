@@ -18,13 +18,13 @@ namespace Assignment2WebAPI.Data
             this.fileContext = fileContext;
         }
         
-        public async Task<User> ValidateUser(string userName, string passWord) {
+        public async Task<User> ValidateUser(string userName, string password) {
             User first =  fileContext.Users.FirstOrDefault(user => user.UserName.Equals(userName));
             if (first == null) {
                 throw new Exception("User not found");
             }
 
-            if (!first.Password.Equals(passWord)) {
+            if (!first.Password.Equals(password)) {
                 throw new Exception("Incorrect password");
             }
 

@@ -56,7 +56,6 @@ namespace BlazorAssignment.Data.Impl
                
                throw new ArgumentException($"{msg}" );
            }
-           
         }
     }
 }
